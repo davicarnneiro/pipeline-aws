@@ -13,13 +13,12 @@ terraform {
     bucket  = "bucket-s3-tfstate"
     key     = "aws/us-east-1/ec2/terraform.tfstate"
     region  = "us-east-1"
-    #profile = "default"
+
   }
 }
 
 provider "aws" {
   region  = "us-east-1"
-  #profile = "default"
 
   default_tags {
     tags = {
@@ -35,6 +34,6 @@ data "terraform_remote_state" "network" {
     bucket  = "bucket-s3-tfstate"
     key     = "aws/us-east-1/network/terraform.tfstate"
     region  = "us-east-1"
-    #profile = "default"
+
   }
 }
