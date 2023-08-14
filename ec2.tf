@@ -1,7 +1,7 @@
 ## /KEY-PAIR
 resource "aws_key_pair" "key" {
   key_name   = "aws-key" # gerar chave key com o comando ssh-keygen -f aws-key
-  public_key = file("./aws-key.pub")
+  public_key = var.aws_pub_key
 }
 
 ## /EC2
